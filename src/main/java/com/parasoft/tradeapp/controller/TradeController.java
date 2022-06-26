@@ -16,7 +16,7 @@ public class TradeController {
     @Autowired
     private TradeService tradeService;
 
-    @PostMapping("/TradeAdd")
+    @PostMapping("/tradeAdd")
     public String saveTrade(@RequestBody Trade trade){
 
         try {
@@ -28,12 +28,12 @@ public class TradeController {
         }
     }
 
-    @GetMapping("/Trades")
+    @GetMapping("/trades")
     public String fetchTradeList(){
             return tradeService.fetchTradeList();
     }
 
-    @PostMapping("/RunExpiry")
+    @PostMapping("/runExpiry")
     public String updateExpiry(){
         return tradeService.runExpiry();
     }
